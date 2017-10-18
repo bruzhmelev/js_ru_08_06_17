@@ -5,6 +5,8 @@ import ArticlesChart from './ArticlesChart'
 import UserForm from './UserForm'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
+import Datapicker from './Datapicker'
+
 
 class App extends Component {
     static propTypes = {
@@ -25,6 +27,7 @@ class App extends Component {
         return (
             <div>
                 <UserForm />
+                <Datapicker />
                 <Select options = {options} value = {this.state.selection} onChange = {this.changeSelection} multi />
                 <ArticleList articles = {articles} defaultOpenId = {articles[0].id}/>
                 <ArticlesChart articles = {articles} />
